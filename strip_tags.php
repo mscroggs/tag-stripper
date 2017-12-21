@@ -11,7 +11,7 @@ function replace_open_tag($tag){
     $out = "<".$tsp[0];
     foreach($tsp as $i=>$attr){if($i>0){
         $attr_s = explode("=",$attr);
-        if(in_array($attr_s[0],$allowed_attr) && strpos($attr,"javascript")===false){
+        if(in_array($attr_s[0],$allowed_attr) && strpos($attr,"javascript:")===false){
             $out .= " ".$attr;
         }
     }}
