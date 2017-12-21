@@ -11,7 +11,7 @@ function test($a,$b){
     if(strip_comment_tags($a)!=$b){echo($RED);}
     echo($a." -> ".strip_comment_tags($a));
     if(strip_comment_tags($a)!=$b){echo(" fail".$DEFAULT);}
-    echo("\n\n");
+    echo("\n");
 }
 
 test("<b>hello</b>","<b>hello</b>");
@@ -19,4 +19,5 @@ test("<b onmouseover='alert(\"hello\")'>hello</b>","<b>hello</b>");
 test("<script>hello</script>","hello");
 test("","");
 test("<a href='javascript:alert(\"lol\")'>link</a>","<a>link</a>");
+test("<a href='http://example.com'>link</a>","<a href='http://example.com'>link</a>");
 ?>
