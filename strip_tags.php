@@ -5,7 +5,6 @@ $allowed_attr = Array("href");
 function replace_open_tag($tag){
     global $allowed_tags;
     global $allowed_attr;
-    //echo $tag[1];
     $tsp = explode(" ",$tag[1]);
     if(!in_array($tsp[0],$allowed_tags)){return "";}
     $out = "<".$tsp[0];
@@ -16,7 +15,6 @@ function replace_open_tag($tag){
         }
     }}
     $out .= ">";
-    //print_r($tsp);
     return $out;
 }
 
